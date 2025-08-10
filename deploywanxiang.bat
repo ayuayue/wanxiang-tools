@@ -32,31 +32,31 @@ echo "延时 2 秒"
 
 ping -n 2 127.0.0.1>nul
 
-echo "清空「用户目录」，免其干扰新参数生效"
+@REM echo "清空「用户目录」，免其干扰新参数生效"
 
-set  aPath="%UserDir%"\build
-call:CleanDirfunc "%aPath%"
+@REM set  aPath="%UserDir%"\build
+@REM call:CleanDirfunc "%aPath%"
 
-set  aPath="%UserDir%"\lua\lib
-call:CleanDirfunc "%aPath%"
+@REM set  aPath="%UserDir%"\lua\lib
+@REM call:CleanDirfunc "%aPath%"
 
-set  aPath="%UserDir%"\lua
-call:CleanDirfunc "%aPath%"
+@REM set  aPath="%UserDir%"\lua
+@REM call:CleanDirfunc "%aPath%"
 
-set  aPath="%UserDir%"\icons
-call:CleanDirfunc "%aPath%"
+@REM set  aPath="%UserDir%"\icons
+@REM call:CleanDirfunc "%aPath%"
 
-echo "已清空「build」"
+@REM echo "已清空「build」"
 
 cd "%UserDir%"
 
-for /f "delims=" %%a in ('dir/s/ad/b^|sort /r') do (
-echo,rd /s /Q "%%a"&& rd /s /Q "%%a"
-)
+@REM for /f "delims=" %%a in ('dir/s/ad/b^|sort /r') do (
+@REM echo,rd /s /Q "%%a"&& rd /s /Q "%%a"
+@REM )
 
-DEL /F /A /Q "%UserDir%"\*
+@REM DEL /F /A /Q "%UserDir%"\*
 
-echo "1-成功清空「用户目录」"
+@REM echo "1-成功清空「用户目录」"
 
 echo "2-更新APPDATA目录"
 
