@@ -1,0 +1,6 @@
+*.userdb
+*.gram
+*.db
+build
+.vscode
+.idea
